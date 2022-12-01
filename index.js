@@ -1,6 +1,6 @@
 const tutorials = [
   'what does the this keyword mean?',
-  'What is the Constructor OO pattern?',
+  'what is the constructor oO pattern?',
   'implementing Blockchain Web API',
   'The Test Driven Development Workflow',
   'What is NaN and how Can we Check for it',
@@ -11,6 +11,27 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+
+
+function titleCased(){
+   return( tutorials.map((tutorial)=>{
+    // tutorial.split(' ').map((word)=> word.charAt(0).toUpperCase() + word.slice(1)).join(' ');  
+  
+    const words = tutorial.split(' ');
+    let arrayOfCapitalizedWords = [];
+    for (let word of words) {
+        arrayOfCapitalizedWords.push(word[0].toUpperCase() + word.slice(1));
+    }
+    return arrayOfCapitalizedWords.join(' ');
+  
+  })
+   )
 }
+
+
+
+
+
+
+
+
